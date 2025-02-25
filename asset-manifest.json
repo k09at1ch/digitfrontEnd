@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/k09at1ch/digitfrontEnd/static/css/main.7acaea2f.css",
+    "main.js": "/k09at1ch/digitfrontEnd/static/js/main.07d3183d.js",
+    "index.html": "/k09at1ch/digitfrontEnd/index.html",
+    "main.7acaea2f.css.map": "/k09at1ch/digitfrontEnd/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/k09at1ch/digitfrontEnd/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
