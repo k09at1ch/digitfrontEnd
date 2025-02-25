@@ -2,7 +2,7 @@
   "name": "digitfrontEnd",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/k09at1ch/digitfrontEnd",
+  "homepage": "https://k09at1ch.github.io/digitfrontEnd",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
