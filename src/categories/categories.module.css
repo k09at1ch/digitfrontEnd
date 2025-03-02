@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+*{
+    font-family: "Playwrite IT Moderna", cursive;
+}
+.listBox{
+    min-height: 100hv;
+}
 .categoriesList{
-    
+    list-style: none;
+    margin: 0;
+    padding: 25px;
+    width: 38vh;
+    border-right: 2px solid black;
+    box-shadow:  1px 0 8px black;
+}
+.button{
+    display: inline-block;
+    padding: 7px 8px;
+    border-radius: 10px;
+    border: 0;
+    background-color: white;
+   
+}
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.1s ease-in-out, font-size 0.1s ease-in-out;
+}
+
+.link:hover {
+    color: green;
+    font-size: 19px;
+}
+.h1{
+    font-weight: 700;
+    font-size: 28px;
+    padding: 7px 8px;
+    font-family: "Madimi One", sans-serif;
+}
+.scaleLoader {
+    margin-left:40%;
 }

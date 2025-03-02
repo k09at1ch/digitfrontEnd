@@ -12,7 +12,7 @@ function Header() {
       <ul className={`${styles.list} ${styles.listbox}`}>
         <ul className={styles.list}>
           <li>
-            <Link to="/" className={styles.logoButton}>
+            <Link to="/digitfrontEnd" className={styles.logoButton}>
               <img alt="Logo" src={logo} className={styles.logo} />
             </Link>
           </li>

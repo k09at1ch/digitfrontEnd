@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Notiflix from 'notiflix';
-
+import style from "./categories.module.css"
+import { ScaleLoader } from 'react-spinners';
 function Categories() {
   const [categories, setCategories] = useState([]);
-
+  const [loading, setLoading]=useState(true)
   useEffect(() => {
     aviableCategories();
   }, []);
-
   const aviableCategories = async () => {
     try {
       const res = await axios.get(
@@ -18,6 +18,8 @@ function Categories() {
       setCategories(res.data);
     } catch (err) {
       Notiflix.Notify.failure(`Помилка: ${err.message}`);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -26,15 +28,28 @@ function Categories() {
   };
 
   return (
-    <div>
-      <ul>
-        {categories.map((category, index) => (
-          <li key={index}>
-            <button onClick={() => eventListener(category.category)}>
-              <Link to={`/categories/${category.category}`}>{category.category}</Link>
-            </button>
-          </li>
-        ))}
+    <div className={style.listBox}>
+      <ul className={style.categoriesList}>
+        <li className={style.h1}>Categories:</li>
+        {loading ? (
+          <ScaleLoader color="#00ff20" speedMultiplier="2" className={style.scaleLoader } />
+        ) : (
+          categories.map((category, index) => (
+            <li key={index}>
+              <button
+                onClick={() => eventListener(category.category)}
+                className={style.button}
+              >
+                <Link
+                  to={`/categories/${category.category}`}
+                  className={style.link}
+                >
+                  {category.category}
+                </Link>
+              </button>
+            </li>
+          ))
+        )}
       </ul>
     </div>
   );
