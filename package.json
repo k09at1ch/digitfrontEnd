@@ -5,7 +5,6 @@
   "homepage": "https://k09at1ch.github.io/digitfrontEnd",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
-    "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "notiflix": "^3.2.8",
     "react": "^18.1.0",
@@ -47,6 +46,8 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+
     "gh-pages": "^6.3.0"
   }
 }
