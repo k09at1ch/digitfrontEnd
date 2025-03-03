@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import styles from './header.module.css';
 // import axios from 'axios';
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
 
 function Modal({ modalShown, setModalShown }) {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
-  const date = new Date();
+  // const date = new Date();
   const [isLoading, setIsLoading] = useState(false);
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory]=useState('')
 
   useEffect(() => {
+    setIsLoading(true)
+    setCategories([])
     const getCategories = async () => {
       // setIsLoading(true);
       // try {

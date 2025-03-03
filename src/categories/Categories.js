@@ -9,6 +9,8 @@ function Categories() {
   const [loading, setLoading]=useState(true)
   useEffect(() => {
     aviableCategories();
+    setLoading(true);
+    setCategories([]);
   }, []);
   const aviableCategories = async () => {
     // try {
