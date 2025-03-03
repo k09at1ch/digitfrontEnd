@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './header.module.css';
-import axios from 'axios';
+// import axios from 'axios';
 import Notiflix from 'notiflix';
 
 function Modal({ modalShown, setModalShown }) {
@@ -13,44 +13,44 @@ function Modal({ modalShown, setModalShown }) {
 
   useEffect(() => {
     const getCategories = async () => {
-      setIsLoading(true);
-      try {
-        const res = await axios.get(
-          'https://67bcacb0ed4861e07b3b83a0.mockapi.io/api/digit/category'
-        );
-          setCategories(res.data);
-          console.log(res.data)
-      } catch (error) {
-        Notiflix.Notify.failure('Не вдалося завантажити категорії товарів');
-      } finally {
-        setIsLoading(false);
-      }
+      // setIsLoading(true);
+      // try {
+      //   const res = await axios.get(
+      //     'https://67bcacb0ed4861e07b3b83a0.mockapi.io/api/digit/category'
+      //   );
+      //     setCategories(res.data);
+      //     console.log(res.data)
+      // } catch (error) {
+      //   Notiflix.Notify.failure('Не вдалося завантажити категорії товарів');
+      // } finally {
+      //   setIsLoading(false);
+      // }
     };
     getCategories();
   }, []);
 
   const submit = async event => {
     event.preventDefault();
-    setIsLoading(true);
-    try {
-      const res = await axios.post(
-        'https://67bcacb0ed4861e07b3b83a0.mockapi.io/api/digit/digit',
-        {
-          productName: name,
-          price: price,
-            date: date.toISOString(),
-          category: selectedCategory,
-        }
-      );
-      console.log(res.data);
-      Notiflix.Notify.success('Продукт успішно створено!');
-      setModalShown(false);
-    } catch (error) {
-      console.error(error);
-      Notiflix.Notify.failure('Помилка при створенні продукту');
-    } finally {
-      setIsLoading(false);
-    }
+    // setIsLoading(true);
+    // try {
+    //   const res = await axios.post(
+    //     'https://67bcacb0ed4861e07b3b83a0.mockapi.io/api/digit/digit',
+    //     {
+    //       productName: name,
+    //       price: price,
+    //         date: date.toISOString(),
+    //       category: selectedCategory,
+    //     }
+    //   );
+    //   console.log(res.data);
+    //   Notiflix.Notify.success('Продукт успішно створено!');
+    //   setModalShown(false);
+    // } catch (error) {
+    //   console.error(error);
+    //   Notiflix.Notify.failure('Помилка при створенні продукту');
+    // } finally {
+    //   setIsLoading(false);
+    // }
   };
 
   return (
