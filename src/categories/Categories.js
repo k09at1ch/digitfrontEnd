@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import Notiflix from 'notiflix';
+// import axios from 'axios';
+// import Notiflix from 'notiflix';
 import style from "./categories.module.css"
 import { ScaleLoader } from 'react-spinners';
 function Categories() {
@@ -11,16 +11,16 @@ function Categories() {
     aviableCategories();
   }, []);
   const aviableCategories = async () => {
-    try {
-      const res = await axios.get(
-        'https://67bcacb0ed4861e07b3b83a0.mockapi.io/api/digit/category'
-      );
-      setCategories(res.data);
-    } catch (err) {
-      Notiflix.Notify.failure(`Помилка: ${err.message}`);
-    } finally {
-      setLoading(false);
-    }
+    // try {
+    //   const res = await axios.get(
+    //     'https://67bcacb0ed4861e07b3b83a0.mockapi.io/api/digit/category'
+    //   );
+    //   setCategories(res.data);
+    // } catch (err) {
+    //   Notiflix.Notify.failure(`Помилка: ${err.message}`);
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   const eventListener = category => {
