@@ -52,7 +52,7 @@ function Modal({ modalShown, setModalShown }) {
       Notiflix.Notify.failure('Помилка при створенні продукту');
     } finally {
       setIsLoading(false);
-    }
+    } 
   };
 
   return (
